@@ -48,7 +48,7 @@ This created a monstrous >20-character regular expression for something that can
 How is this useful, and how do we know it's the same regular expression?
 
 Regular expressions and automata are two different-looking ways of writing down _languages_, as in "sets of strings". 
-The automaton `->①-ₐ->⓶` and the RE `a+` represent the language `{a, aa, aa, aaa...}`. We can also give it a human-language description: "infinitely many words containing _a_". 
+The automaton `->①-ₐ->⓶↺ₐ` and the RE `a+` represent the language `{a, aa, aa, aaa...}`. We can also give it a human-language description: "infinitely many words containing _a_". 
 The automaton and the RE just choose a different strategy to make the description more compact.
 
 
