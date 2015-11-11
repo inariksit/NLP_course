@@ -58,3 +58,12 @@ How do we see if `(TODO complex regex)` it's actually the same as `(aba?)+`?
 
 This course is an overview of many things, and isn't likely to go deeper into automata theory.
 If some of you are interested to learn about the topic more deeply, I recommend a Chalmers course given in LP4: http://www.cse.chalmers.se/edu/course/TMV027/ . There is also an online course in Coursera, given at about LP1 (just ended for this year): https://www.coursera.org/course/automata
+
+## Part III: Word statistics, language models and corpus methods
+
+### PMI and LMI
+
+Two things:
+
+* Intuition about PMI and LMI
+* Logarithms
