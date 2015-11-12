@@ -135,26 +135,45 @@ You can query functions or classes, but the output isn't particularly helpful.
 
 The expression in parentheses can also have some variation:
 
-* `aba?` accepts _ab_ and _aba_. `(aba?)*` accepts any combination of _ab_ and _aba_ in sequence, 0 to infinite times.
+* `aba?` accepts _ab_ and _aba_. `(aba?)*` accepts any combinations of _ab_ and _aba_ in sequence, 0 to infinite times.
 
-### Comments about automatic conversion between FSA and regex
+### Comments about automatic conversion between automata and regular expressions
 
-I showed in class a way to convert an automaton into a regular expression using the *state removal method*. 
-This created a monstrous >20-character regular expression for something that can be expressed as `(aba?)+`.
+I showed in class a way to convert an automaton into a regular expression using the **state removal method**. 
+This created a monstrous >20-character regular expression for something that can be expressed as `(aba?)+`. 
 
-How is this useful, and how do we know it's the same regular expression?
+In this course, you're not expected to apply these methods; the following is just for your potential interest.
 
-Regular expressions and automata are two different-looking ways of writing down _languages_, as in "sets of strings". 
-The automaton `->①-ₐ->⓶↺ₐ` and the RE `a+` represent the language `{a, aa, aa, aaa...}`. We can also give it a human-language description: "infinitely many words containing _a_". 
-The automaton and the RE just choose a different strategy to make the description more compact.
+#### How is this useful?
+
+Regular expressions (RE) and automata are two ways of expressing _languages_, as in "sets of strings". They look different on the surface level, but can express exactly the same languages:
+for instance, the automaton `→①-a→⓶↺ₐ` and the RE `a+` describe the language `{a, aa, aa, aaa, ...}`. This means that the RE and the automaton are equivalent. This applies to both deterministic (DFA) and nondeterministic (NFA) automata.
+
+In addition to RE-automaton equivalence, two or more REs and two or more automata can be equivalent with each other, such as the REs `a+` and `aa*`. There are then some natural questions to ask:
+
+* Is the RE `(aba?)+` same as the RE `(ab|ab(aab)*(a|aab))+`?
+* Is the RE `(aba?)+` same as the DFA *x*?
+* Is the NFA *y* same as the NFA *z*?
+* What is the smallest possible DFA for the RE `(aba?)+`?
+
+In order to compare REs, it turns out that we need to go via automata. There is an unique, minimal deterministic automaton for each language, and we simply transform the REs/automata into that. When I say "simply", I mean the following steps:
+
+* Convert your RE into an NFA: http://hackingoff.com/compilers/regular-expression-to-nfa-dfa
+* Convert your ugly and verbose *nondeterministic* automaton into an ugly and verbose *deterministic* automaton: https://www.google.se/search?q=nfa+determinization
+* Convert your ugly and verbose DFA into the unique, *minimal* DFA https://www.google.se/search?q=dfa+minimization
 
 
-How do we see if `(TODO complex regex)` it's actually the same as `(aba?)+`? 
+### More resources
 
+If you are interested to learn more about automata:
 
+* Chalmers course in LP4: http://www.cse.chalmers.se/edu/course/TMV027/ 
+* Online course in Coursera, given at about LP1 (just ended for this year): https://www.coursera.org/course/automata
 
-This course is an overview of many things, and isn't likely to go deeper into automata theory.
-If some of you are interested to learn about the topic more deeply, I recommend a Chalmers course given in LP4: http://www.cse.chalmers.se/edu/course/TMV027/ . There is also an online course in Coursera, given at about LP1 (just ended for this year): https://www.coursera.org/course/automata
+If you wonder what's the use for NLP:
+
+* Program for the conference FSMNLP ("Finite-State Methods and Natural Language Processing"): [2015|http://fsmnlp2015.phil.hhu.de/?page_id=210], [http://fsmnlp2013.cs.st-andrews.ac.uk/programme.html|2013], [http://ixa2.si.ehu.es/fsmnlp2012/index.php/en/programme.html|2012]
+
 
 ## Part III: Word statistics, language models and corpus methods
 
