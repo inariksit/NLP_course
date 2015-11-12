@@ -2,29 +2,21 @@
 
 ### Question about printing Python objects
 
-You were asked to do a frequency distribution by using `FreqDist` object in NLTK. Here's an example (in a pan-Germanic language ^_^).
+You were asked to do a frequency distribution by using `FreqDist` object in NLTK. Here's an example:
 
 ```python
+>>> from nltk.book import text2
 >>> from nltk import FreqDist
->>> rawtext = "Kyllingen din er ikke trygg. Das ist kein Buch, sondern ein Mantel. Hoeveel landen zijn er in de wereld?"
->>> naive_split_text = rawtext.split()
-```
-
-The `split()` function takes a string and returns a list of strings.
-If no parameter is given, it uses whitespace to split the sentence into words.
-`naive_split_text` has the value `['Kyllingen', 'din', 'er', 'ikke', 'trygg.', 'Das', 'ist', 'kein', 'Buch,', 'sondern', 'ein', 'Mantel.', 'Hoeveel', 'landen', 'zijn', 'er', 'in', 'de', 'wereld?']`.
-
-Now we create the frequency distribution to this particular text.
-
-```python
->>> fdist = FreqDist(naive_split_text)
+>>> fdist = FreqDist(text2)
 ```
 
 In the interactive shell, we can just type the variable `fdist` and it will print some nice information. But if we try to call the `print()` function to it, this happens:
 
 ```python
+>>> fdist
+FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and': 3350, u'her': 2436, u'a': 2043, u'I': 2004, u'in': 1904, ...})
 >>> print(fdist)
-<FreqDist with 18 samples and 19 outcomes>
+<FreqDist with 6833 samples and 141576 outcomes>
 ```
 
 The variable `fdist` is an object of the class `FreqDist`. 
@@ -34,18 +26,18 @@ In addition, there are a number of methods that all Python objects will have. Th
 
 ```python
 >>> fdist.__str__()
-'<FreqDist with 18 samples and 19 outcomes>'
+'<FreqDist with 6833 samples and 141576 outcomes>'
 >>> fdist.__repr__()
-"FreqDist({'er': 2, 'Kyllingen': 1, 'Mantel.': 1, 'din': 1, 'Buch,': 1, 'in': 1, 'kein': 1, 'wereld?': 1, 'zijn': 1, 'ist': 1, ...})"
+"FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and': 3350, u'her': 2436, u'a': 2043, u'I': 2004, u'in': 1904, ...})"
 ```
 
 Actually they are so fancy that we can even write like this:
 
 ```python
 >>> str(fdist)
-'<FreqDist with 18 samples and 19 outcomes>'
+'<FreqDist with 6833 samples and 141576 outcomes>'
 >>> repr(fdist)
-"FreqDist({'er': 2, 'Kyllingen': 1, 'Mantel.': 1, 'din': 1, 'Buch,': 1, 'in': 1, 'kein': 1, 'wereld?': 1, 'zijn': 1, 'ist': 1, ...})"
+"FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and': 3350, u'her': 2436, u'a': 2043, u'I': 2004, u'in': 1904, ...})"
 ```
 
 The underscore-less functions cannot be written like that:
@@ -61,7 +53,7 @@ So! What is the moral of this story? Let's get back to `print()`. We can call `p
 
 ```python
 >>> print(repr(fdist))
-FreqDist({'er': 2, 'Kyllingen': 1, 'Mantel.': 1, 'din': 1, 'Buch,': 1, 'in': 1, 'kein': 1, 'wereld?': 1, 'zijn': 1, 'ist': 1, ...})
+FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and': 3350, u'her': 2436, u'a': 2043, u'I': 2004, u'in': 1904, ...})
 ```
 
 Or we can see if there is a special print method for the object using `dir(fdist)`.
@@ -102,7 +94,20 @@ If you define your own variables or import something, `dir()` will show that too
 
 ### type()
 
+You can query the types of variables. 
 
+```python
+>>> type(3)
+<type 'int'>
+>>> type(3.14)
+<type 'float'>
+>>> type((1,2,3))
+<type 'tuple'>
+>>> type([1,2,3])
+<type 'list'>
+>>> type({1:"foo",2:"bar"})
+<type 'dict'>
+```
 
 
 ## Part II: Automata
