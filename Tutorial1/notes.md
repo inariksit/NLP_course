@@ -141,6 +141,7 @@ The expression in parentheses can also have some variation:
 
 Exercise 2.8 in Jurafsky & Martin was about manual conversion of automaton to regular expression (RE). 
 There are several REs that describe the language of the automaton; the shortest and arguably the most human-readable is `(aba?)+`. 
+
 A number of you gave a long and complex RE, which was not equivalent to the automaton, so I showed a way to construct even longer RE, with the plus side that it is equivalent to the automaton.
 In case you're interested in the topic, the method I used was called *state removal method*. If you'd rather do formal semantics on your free time, the take-home message is "if you need to mess around with automata and RE, there are plenty of ways to make your computer do that for you".
 
