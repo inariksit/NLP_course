@@ -172,7 +172,7 @@ If you are interested to learn more about automata:
 
 If you wonder what's the use for NLP:
 
-* Program for the conference FSMNLP ("Finite-State Methods and Natural Language Processing"): [2015|http://fsmnlp2015.phil.hhu.de/?page_id=210], [http://fsmnlp2013.cs.st-andrews.ac.uk/programme.html|2013], [http://ixa2.si.ehu.es/fsmnlp2012/index.php/en/programme.html|2012]
+* Program for the conference FSMNLP ("Finite-State Methods and Natural Language Processing"): [2015](http://fsmnlp2015.phil.hhu.de/?page_id=210), [2013](http://fsmnlp2013.cs.st-andrews.ac.uk/programme.html), [2012](http://ixa2.si.ehu.es/fsmnlp2012/index.php/en/programme.html)
 
 
 ## Part III: Word statistics, language models and corpus methods
