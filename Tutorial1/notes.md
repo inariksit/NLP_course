@@ -114,6 +114,8 @@ You can query the types of variables. This works fine for
 <type 'list'>
 >>> type({1:"foo",2:"bar"})
 <type 'dict'>
+```
+
 
 * objects
 
