@@ -13,8 +13,6 @@ You were asked to do a frequency distribution by using `FreqDist` object in NLTK
 In the interactive shell, we can just type the variable `fdist` and it will print some nice information. But if we try to call the `print()` function to it, this happens:
 
 ```python
->>> fdist
-FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and': 3350, u'her': 2436, u'a': 2043, u'I': 2004, u'in': 1904, ...})
 >>> print(fdist)
 <FreqDist with 6833 samples and 141576 outcomes>
 ```
@@ -22,7 +20,7 @@ FreqDist({u',': 9397, u'to': 4063, u'.': 3975, u'the': 3861, u'of': 3565, u'and'
 The variable `fdist` is an object of the class `FreqDist`. 
 Objects are complex structures, with many fields and methods. 
 For FreqDist, these methods include `plot()`, for showing a nice graphical output, and `hapaxes()`, for printing out the words that only appear once.
-In addition, there are a number of methods that all Python objects will have. These include `__str__()` and `__repr__()`. (You can see that something fancy is going on because of the underscores!) Try it out:
+In addition, there are a number of methods that all Python objects have. These include `__str__()` and `__repr__()`. (You can see that something fancy is going on because of the underscores!) Try it out:
 
 ```python
 >>> fdist.__str__()
@@ -94,21 +92,37 @@ If you define your own variables or import something, `dir()` will show that too
 
 ### type()
 
-You can query the types of variables. 
+You can query the types of variables. This works fine for
+
+* primitive types: integer, boolean, ..
 
 ```python
+>>> type(True)
+<type 'bool'>
 >>> type(3)
 <type 'int'>
 >>> type(3.14)
 <type 'float'>
+```
+
+* collections: list, tuple, dict (though it doesn't tell you what is inside)
+
+```python
 >>> type((1,2,3))
 <type 'tuple'>
 >>> type([1,2,3])
 <type 'list'>
 >>> type({1:"foo",2:"bar"})
 <type 'dict'>
+
+* objects
+
+```python
+>>> type(fdist)
+<class 'nltk.probability.FreqDist'>
 ```
 
+You can query functions or classes, but the output isn't particularly helpful.
 
 ## Part II: Automata
 
