@@ -77,9 +77,9 @@ log ___________________________________ = log _________________ = log 1.000...ti
      
 ```
 
-PMI is tiny for two frequent words, even though they are hardly ever without one another.
+PMI is tiny for two frequent words, even though they appear hardly ever without one another. (Arguably, we don't want *this* & *and* to have a big PMI)
 
-With LMI, we multiply the tiny PMI with the huge `count(x,y)`, and get something less tiny.
+To get LMI, we multiply the tiny PMI with the huge `count(x,y)`, and get something less tiny.
 
 In practice, LMI is still tiny but not really massively tiny like PMI.
 
@@ -97,7 +97,7 @@ log ________________ = log corpus_size/192 = quite big number
       1 * 192
 ```
 
-With LMI, we multiply the quite big PMI with the small `count(x,y)` and the final LMI score will stay big.
+To get LMI, we multiply the quite big PMI with the small `count(x,y)` and the final LMI score will stay big.
 
 Compared to the previous, the difference in LMIs is smaller than the difference in PMIs:
 
@@ -120,9 +120,10 @@ log _____________________  ≈ log _________________ = tiny number
 
 PMI gives the same tiny number as the scenario `1a)`. But LMI shows the difference: here `count(x,y)` is tiny, and when we multiply PMI by it, the LMI is also tiny.
 
-So, PMI gives equal results to the following scenarions, but LMI gives the first one better result and the second one worse.
-* `frequent x, frequent y, frequent x&y` (and, this)
-* `frequent x, rare y, rare x&y` (those, ἐκβουτῠπόομαι)
+|                      | PMI  | LMI   |
+|----------------------|------|-------|
+| and, this            | tiny | small |
+| those, ἐκβουτῠπόομαι | tiny | tiny  |
 
 **How does this scale to the more common scenarios, with aardvarks, logarithms, googleology and science?**
 
