@@ -86,7 +86,7 @@ In practice, LMI is still tiny but not really massively tiny like PMI.
 ##### 1b) Rare x and y: *count(x) ≈ count(y) ≈ count(x,y) ≈ 1*
 
 The words `x` and `y` are rare on their own and hence rare together. 
-For example, *sAiMZzqGdkpuJyWwIYMvZahVqVo* (I just decided that means *hello* in my brand new conlang!) has one hit--this page--and *ἐκβουτῠπόομαι* has 192 hits.
+For example, *sAiMZzqGdkpuJyWwIYMvZahVqVo* (I just decided that means *hello* in my brand new conlang!) has one hit–this page–and *ἐκβουτῠπόομαι* has 192 hits.
 (192 is totally ≈1 when we compare to the count for *this* or *and* or *school*. :-P)
 This document is the only one that uses them together.
 We calculate `PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι)`:
