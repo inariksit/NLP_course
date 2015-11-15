@@ -278,19 +278,21 @@ With LMI, we multiply the relatively big number with the tiny `count(x,y)` and t
 
 #### 2. `count(x) ≈ corpus_size` and `count(y) ≈ count(x,y) ≈ 1`
  
-One of the words is really common and the other is really infrequent. For instance, `PMI(those, ἐκβουτῠπόομαι)`.
+One of the words is really common and the other is really infrequent. For instance, `PMI(those, ἐκβουτῠπόομαι)`:
 
 ```
        ~1 * corpus_size              corpus_size
-log _____________________  = log  _________________
+log _____________________  ≈ log  _________________
      (corpus_size-p) * ~1          corpus_size - p
 ```
 
-PMI gives the same tiny number as the scenario `1a)`. But LMI shows the difference: here `count(x,y)` is tiny, and it won't change the tiny PMI into a bigger LMI.
+PMI gives the same tiny number as the scenario `1a)`. But LMI shows the difference: here `count(x,y)` is tiny, and when we multiply PMI by it, the LMI is also tiny.
 
-So, the scenario *frequent x, frequent y, frequent x&y* gets a better LMI than *frequent x, infrequent y, infrequent x&y*. In contrast, both get the same PMI.
+So, PMI gives equal results to the following scenarions, but LMI gives the first one better result and the second one worse.
+* *frequent x, frequent y, frequent x&y* (and, this)
+* *frequent x, infrequent y, infrequent x&y* (those, ἐκβουτῠπόομαι)
 
-How does this scale down to the more common scenarios, with aardvarks, logarithms, googleology and science?
+How does this scale to the more common scenarios, with aardvarks, logarithms, googleology and science?
 
 #### 3. `count(x) ≈ count(y) ≈ corpus_size` and `count(x,y) ≈ 1`
 
