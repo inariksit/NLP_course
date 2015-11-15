@@ -101,11 +101,10 @@ To get LMI, we multiply the quite big PMI with the small `count(x,y)` and the fi
 
 Compared to the previous, the difference in LMIs is smaller than the difference in PMIs:
 
-* PMI(and, this) = tiny
-* PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι) = big
-
-* LMI(and,this) = tiny * (corpus_size-p)
-* LMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι) = big * 1
+|                                            | PMI  | LMI                    |
+|--------------------------------------------|------|------------------------|
+| and, this                                  | tiny | tiny * (corpus_size-p) |
+| sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι | big  | big * ~1               |
 
 
 #### 2. *count(x) ≈ corpus_size* and *count(y) ≈ count(x,y) ≈ 1*
