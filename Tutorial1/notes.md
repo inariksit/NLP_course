@@ -241,32 +241,36 @@ LMI, Lexicographers Mutual Information, is meant to balance this by multiplying 
 
 Now let's think of some extreme scenarios.
 
-#### 1. `count(x) ≈ count(y) ≈ count(x,y)`
+#### 1. count(x) ≈ count(y) ≈ count(x,y)
 
-In the first scenario, x and y appear only together, never alone.
+In the first scenario, x and y appear almost always together, ie. hardly ever alone.
 We can subdivide this into the following cases:
 
-##### 1a) `count(x) ≈ count(y) ≈ count(x,y) ≈ corpus_size`
+##### 1a) Frequent x and y: count(x) ≈ count(y) ≈ count(x,y) ≈ corpus_size
 
 The words `x` and `y` appear in almost every document. Let us assume there are only `p` documents where they don't appear. (If they appear in literally every document, what happens then?)
-Think for instance `PMI(and, this)`.
+Think for instance `PMI(and, this)`:
 
 ```
      (corpus_size-p) * corpus_size               corpus_size
-log ___________________________________ = log _________________ = log 1.000...1  ≈ 0.00...tiny number
+log ___________________________________ = log _________________ = log 1.000...tiny  ≈ 0.0000...tiny
      (corpus_size-p) * (corpus_size-p)         corpus_size - p
      
 ```
 
-With LMI, we multiply the tiny number with the huge `corpus_size-p` number, and should get something not quite as tiny.
+PMI is tiny for two frequent words, even though they are hardly ever without one another.
 
-##### 1b) `count(x) ≈ count(y) ≈ count(x,y) ≈ 1`
+With LMI, we multiply the tiny PMI with the huge `count(x,y)`, and get something less tiny.
+
+In practice, it's still tiny but not really massively tiny like with PMI.
+
+##### 1b) Rare x and y: count(x) ≈ count(y) ≈ count(x,y) ≈ 1
 
 The words `x` and `y` are rare on their own and hence rare together. 
 For example, *sAiMZzqGdkpuJyWwIYMvZahVqVo* (I just decided that's the first word in my brand new conlang!) has one hit--this page--and *ἐκβουτῠπόομαι* has 192 hits.
-(192 is totally ≈ 1 when we compare to the count for *the*. :-P)
+(192 is totally ≈ 1 when we compare to the count for *this* or *and* or *school*. :-P)
 This document is the only one that uses them together.
-Then `PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι)` becomes
+We calculate `PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι)`:
 
 ```
     1 * corpus_size
@@ -274,9 +278,13 @@ log ________________ = log corpus_size/192 = relatively big number
       1 * 192
 ```
 
-With LMI, we multiply the relatively big number with the tiny `count(x,y)` and the number shouldn't change much.
+With LMI, we multiply the big PMI with the small `count(x,y)` and the number will stay big.
 
-#### 2. `count(x) ≈ corpus_size` and `count(y) ≈ count(x,y) ≈ 1`
+
+
+
+
+#### 2. count(x) ≈ corpus_size` and `count(y) ≈ count(x,y) ≈ 1
  
 One of the words is really common and the other is really infrequent. For instance, `PMI(those, ἐκβουτῠπόομαι)`:
 
@@ -294,9 +302,10 @@ So, PMI gives equal results to the following scenarions, but LMI gives the first
 
 How does this scale to the more common scenarios, with aardvarks, logarithms, googleology and science?
 
-#### 3. `count(x) ≈ count(y) ≈ corpus_size` and `count(x,y) ≈ 1`
+#### 3. count(x) ≈ count(y) ≈ corpus_size` and `count(x,y) ≈ 1
 
 http://www.googlewhack.com/ was created to answer this question. 
+
 
 
 
