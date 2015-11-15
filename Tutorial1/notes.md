@@ -246,7 +246,7 @@ Now let's think of some extreme scenarios.
 In the first scenario, x and y appear almost always together, ie. hardly ever alone.
 We can subdivide this into the following cases:
 
-##### 1a) Frequent x and y: count(x) ≈ count(y) ≈ count(x,y) ≈ corpus_size
+##### 1a) Frequent x and y: *count(x) ≈ count(y) ≈ count(x,y) ≈ corpus_size*
 
 The words `x` and `y` appear in almost every document. Let us assume there are only `p` documents where they don't appear. (If they appear in literally every document, what happens then?)
 Think for instance `PMI(and, this)`:
@@ -262,29 +262,34 @@ PMI is tiny for two frequent words, even though they are hardly ever without one
 
 With LMI, we multiply the tiny PMI with the huge `count(x,y)`, and get something less tiny.
 
-In practice, it's still tiny but not really massively tiny like with PMI.
+In practice, LMI is still tiny but not really massively tiny like PMI.
 
-##### 1b) Rare x and y: count(x) ≈ count(y) ≈ count(x,y) ≈ 1
+##### 1b) Rare x and y: *count(x) ≈ count(y) ≈ count(x,y) ≈ 1*
 
 The words `x` and `y` are rare on their own and hence rare together. 
-For example, *sAiMZzqGdkpuJyWwIYMvZahVqVo* (I just decided that's the first word in my brand new conlang!) has one hit--this page--and *ἐκβουτῠπόομαι* has 192 hits.
-(192 is totally ≈ 1 when we compare to the count for *this* or *and* or *school*. :-P)
+For example, *sAiMZzqGdkpuJyWwIYMvZahVqVo* (I just decided that means *hello* in my brand new conlang!) has one hit--this page--and *ἐκβουτῠπόομαι* has 192 hits.
+(192 is totally ≈1 when we compare to the count for *this* or *and* or *school*. :-P)
 This document is the only one that uses them together.
 We calculate `PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι)`:
 
 ```
     1 * corpus_size
-log ________________ = log corpus_size/192 = relatively big number
+log ________________ = log corpus_size/192 = quite big number
       1 * 192
 ```
 
-With LMI, we multiply the big PMI with the small `count(x,y)` and the number will stay big.
+With LMI, we multiply the quite big PMI with the small `count(x,y)` and the final LMI score will stay big.
+
+Compared to the previous, the difference in LMIs is smaller than the difference in PMIs:
+
+* PMI(and, this) = `tiny`
+* PMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι) = `big`
+
+* LMI(and,this) = `tiny` * (corpus_size-p)
+* LMI(sAiMZzqGdkpuJyWwIYMvZahVqVo, ἐκβουτῠπόομαι) = `big` * 1
 
 
-
-
-
-#### 2. count(x) ≈ corpus_size` and `count(y) ≈ count(x,y) ≈ 1
+#### 2. *count(x) ≈ corpus_size* and *count(y) ≈ count(x,y) ≈ 1*
  
 One of the words is really common and the other is really infrequent. For instance, `PMI(those, ἐκβουτῠπόομαι)`:
 
@@ -298,13 +303,16 @@ PMI gives the same tiny number as the scenario `1a)`. But LMI shows the differen
 
 So, PMI gives equal results to the following scenarions, but LMI gives the first one better result and the second one worse.
 * *frequent x, frequent y, frequent x&y* (and, this)
-* *frequent x, infrequent y, infrequent x&y* (those, ἐκβουτῠπόομαι)
+* *frequent x, rare y, rare x&y* (those, ἐκβουτῠπόομαι)
 
 How does this scale to the more common scenarios, with aardvarks, logarithms, googleology and science?
 
-#### 3. count(x) ≈ count(y) ≈ corpus_size` and `count(x,y) ≈ 1
+#### 3. *count(x) ≈ count(y) ≈ corpus_size* and *count(x,y) ≈ 1*
 
 http://www.googlewhack.com/ was created to answer this question. 
+
+
+
 
 
 
