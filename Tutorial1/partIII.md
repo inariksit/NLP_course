@@ -48,7 +48,7 @@ Using this form of the formula, it is easier to show the following properties.
 
 ### Using and abusing PMI
 
-PMI measures if two words are associated with each other, ie. if they occurr together in documents more often than they would "by change". (Possibly interesting side reading: [*Language is never, ever, ever random*](http://www.kilgarriff.co.uk/Publications/2005-K-lineer.pdf))
+PMI measures if two words are associated with each other, ie. if they occur together in documents more often than they would "by change". (Possibly interesting side reading: [*Language is never, ever, ever random*](http://www.kilgarriff.co.uk/Publications/2005-K-lineer.pdf))
 Bigger value for PMI = more related words.
 As stated in the lecture and tutorial, PMI is biased towards rare words. Looking at the formula, there are two ways of getting a big number from the division:
 
