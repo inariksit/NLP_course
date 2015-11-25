@@ -48,9 +48,10 @@ Some general remarks
 
 ### Supervised/unsupervised
 
-* We know the labels beforehand, and training data has those labels.
+* Supervised: training data has labels
+* Unsupervised: training data has no labels, algorithm tries to cluster similar items
 
-* Unsupervised: training data has no labels
+*EXAMPLE*
 
 ### Distance measures
 
@@ -88,6 +89,10 @@ Then we could map that into 26-dimensional space and calculate the cosine of the
 * Source text: *kor*
 * Classification task: is it actually *kor* or *kör*?
 * Features: is there *mjölk* nearby? How about *bil*?
+
+### Spam
+
+Nice text from 2002: http://www.paulgraham.com/spam.html
 
 
 ### Q6. Entropy
