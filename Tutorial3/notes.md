@@ -58,10 +58,10 @@ Distance measure means a way of measuring the difference between two (or more) i
 
 For instance, say we have bunch of strings and we want to measure their distance to the string “ABBA”. We decide to use the Levenshtein distance (usually called just “edit distance”): calculate the number of  single-character edits that is needed to change one word into the other.
 
-# “ABCA” - change C into B. Edit distance 1.
-# “BBBB” - change both B’s into A’s. Edit distance 2.
-# “HELP” - change all letters into A’s. Edit distance 4.
-# “HELPIAMTRAPPEDINCOMPUTATIONALLINGUISTICS” - edit distance is something very big, you need to delete almost every character.
+1. “ABCA” - change C into B. Edit distance 1.
+2. “BBBB” - change both B’s into A’s. Edit distance 2.
+3. “HELP” - change all letters into A’s. Edit distance 4.
+4. “HELPIAMTRAPPEDINCOMPUTATIONALLINGUISTICS” - edit distance is something very big, you need to delete almost every character.
 
 Levenshtein distance is one distance measure we could use here. Another could be e.g. cosine similarity: we transform all the candidate strings into vectors which count how many times a character appears. 
 
