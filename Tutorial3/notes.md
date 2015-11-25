@@ -46,11 +46,11 @@ Looks fine! Relevant observations:
 
 Some general remarks
 
-### Supervised/unsupervised/semi-supervised
+### Supervised/unsupervised
 
 * We know the labels beforehand, and training data has those labels.
 
-* 
+* Unsupervised: training data has no labels
 
 ### Distance measures
 
@@ -75,6 +75,7 @@ and without labels, this just becomes a vector of 26 values: `[1,1,0,0…,0]`.
 Similarly, BBBB would be `[0,4,0,…,0]`.
 
 Then we could map that into 26-dimensional space and calculate the cosine of the angle between the vectors. Spoiler: that measure is overkill for this task, but useful for some other tasks, where Levenshtein would be too simple.
+(See this highly rated journal article for a better example: http://stackoverflow.com/a/1750187)
 
 ### Lexical selection
 
