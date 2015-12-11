@@ -1,4 +1,4 @@
-# Tutorial 3
+# LT2113 H15 Natural language processing: Tutorial 3
 
 ## Q1. (Toy) Brill tagger
 
@@ -95,7 +95,7 @@ Then we could map that into 26-dimensional space and calculate the cosine of the
 Nice text from 2002: http://www.paulgraham.com/spam.html
 
 
-### Q6. Entropy
+## Q6. Entropy
 [entropy.py](https://github.com/inariksit/NLP_course/blob/master/Tutorial3/entropy.py)
 
 ```python
