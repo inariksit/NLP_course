@@ -7,9 +7,12 @@ def entropy(labels):
     return -sum(p * math.log(p,2) for p in probs)
 
 
-a = ["spam", "spam", "spam"]
-b = ["spam", "spam", "ham", "ham"]
-c = ["horse", "giraffe", "horse", "aardvark", "kangaroo", "aardvark"]
+a = ["spam", "ham"] #1.0
+b = ["giraffe", "horse", "aardvark", "aardvark"] #1.5
+c = ["giraffe", "horse", "aardvark", "aardvark", "aardvark", "aardvark", "aardvark", "aardvark"] # 1.06
+# a = ["spam", "spam", "spam"]
+# b = ["spam", "spam", "ham", "ham"]
+# c = ["horse", "giraffe", "horse", "aardvark", "kangaroo", "aardvark"]
 
 names   = ["Max","Rex","Brutus","Lulu","Max","Bella","Max","Lulu"]
 species = ["dog","dog","dog","dog","human","human","dog","human"]

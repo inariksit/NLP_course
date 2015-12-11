@@ -13,6 +13,10 @@
 
 [PMI and LMI](https://github.com/inariksit/NLP_course/blob/master/Tutorial1/partIII.md)
 
+Zipf's law:
+* [zipf.py](https://github.com/inariksit/NLP_course/blob/master/Tutorial1/zipf.py)
+* [Article in Language Log](http://languagelog.ldc.upenn.edu/nll/?p=22743)
+
 
 
 

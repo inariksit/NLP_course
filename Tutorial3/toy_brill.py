@@ -23,7 +23,7 @@ print(tagged)
 
 
 
-## Version two, with a bit smarter default tagger & rules
+## Version 2, with a bit smarter default tagger & rules
 
 from nltk.tag    import UnigramTagger
 from nltk.corpus import brown
