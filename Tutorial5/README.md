@@ -25,7 +25,7 @@ A language described by a generative grammar doesn't have to be a natural langua
 
 ### Dependency grammar vs. phrase-structure grammar
 
-Dependency grammar is contrasted with a **phrase structure grammar** or **constituency grammar** (those two are *almost* the same thing).
+**Dependency grammar** is contrasted with a **phrase structure grammar** or **constituency grammar** (those two are more or less the same thing).
 
 Dependency grammar will be happy if each word finds its head in the sentence. Word order doesn't matter. For instance, the sentences *I love you* and *you I love* have the same dependency tree. 
 
