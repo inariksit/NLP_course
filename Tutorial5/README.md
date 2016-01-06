@@ -4,13 +4,15 @@ General comment: There is absolutely no reason to apologise doing things in Pyth
 
 TL;DR: It's great that you're doing things in Python, keep doing that!
 
-## Q1. More about entropy
+## Q1, Q3-Q6.
 
+If you have questions that I didn't answer in the individual feedback, do ask me! If I cannot answer you, I'll try at least to direct you to someone who doesn't know.
 
 
 ## Q2. Parsing: a summary
 
-Some terms resulted in more confusion than others. I address common issues below, and individual feedback for more specific things.
+I enjoyed reading your answers! Some terms resulted in more confusion than others. I address common issues below, and individual feedback for more specific things.
+
 
 ### Generative grammar
 
@@ -60,9 +62,4 @@ Many of you mentioned the [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chom
 *Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy. (Don't worry if you don't know what CCG is!)
 
 
-## Q3-Q5. IOB and evaluation metrics
-
-## Q6. Meta
-
-## Bonus questions
 
