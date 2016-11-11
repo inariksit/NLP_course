@@ -6,7 +6,7 @@ TL;DR: It's great that you're doing things in Python, keep doing that!
 
 ## Q1, Q3-Q6.
 
-If you have questions that I didn't answer in the individual feedback, do ask me! If I cannot answer you, I'll try at least to direct you to someone who doesn't know.
+If you have questions that I didn't answer in the individual feedback, do ask me! If I cannot answer you, I'll try at least to direct you to someone who knows more.
 
 
 ## Q2. Parsing: a summary
@@ -57,7 +57,7 @@ A **reductionist** grammar formalism is constrasted with a **licencing** (or, *g
 A couple of terms were related to the expressivity of the grammars: **regular grammar** and **context-free grammar**.
 Many of you mentioned the [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Summary). Regular grammars are the least expressive, and context-free grammars come after regular grammars. You might find the numbering confusing (Type-0=most expressive, Type-3=least expressive)--don't worry about remembering a number, try to get an intuition about what kinds of production rules the grammars allow, what kinds of strings they accept and so on.
 
-*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy. (Don't worry if you don't know what CCG is!)
+*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy.
 
 
 
