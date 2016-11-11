@@ -20,15 +20,15 @@ A mandatory classic reading on the topic of limitations: [link](http://stackover
 
 ### Writing morphological analysers
 
-If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you can write *rewrite rules*, such as `n -> m / _ p` (*n* turns into *m* if followed by *p*), or parallel *constraints*, such as `n:m <=> _ *:p` (an *n* on the lexical side is realised as *m*, if it's followed by a *p* on the surface side; conversely, if a *m* on the surface side is followed by a *p*, then it must be a *n* in the lexical side.) The latter is nicer, because it is unambiguously reversible. 
+If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you can write *rewrite rules*, such as `n -> m / _ p` (*n* turns into *m* if followed by *p*), or parallel *constraints*, such as `n:m <=> _ *:p` (an *n* on the lexical side is realised as *m*, if it's followed by a *p* on the surface side; conversely, if a *m* on the surface side is followed by a *p*, then it must be an *n* in the lexical side.) 
 
-These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they transform the input.
+These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they also transform the input.
 As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language. You just write local rules, one for each phenomenon, and all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the morphology.
 
 
 ### Mathematical insight / writing tools to write morphological analysers
 
-If you yourself want to write a better toolkit for writing morphological analysers, then you'll definitely need deep insight in the theory of automata.
+If you yourself want to write a better toolkit for writing morphological analysers, then you'll definitely need deep insight in the theory of finite-state automata and transducers.
 
 Or if you're just interested in the pure mathematical sense, because you think that automata are beautiful. Well, then you'll likely feel that you *want* to have deep insight, less that you *need*.
 
@@ -36,7 +36,7 @@ Or if you're just interested in the pure mathematical sense, because you think t
 
 ## More resources
 
-If you want to learn more about automata:
+If you want to learn more about automata and formal languages:
 
 * Chalmers course in LP4: http://www.cse.chalmers.se/edu/course/TMV027/ 
 
