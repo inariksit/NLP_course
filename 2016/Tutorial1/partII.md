@@ -20,11 +20,10 @@ A mandatory classic reading on the topic of limitations: [link](http://stackover
 
 ### Writing morphological analysers
 
-If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you write *rewrite rules*: `a` turns into `b` if surrounded by `c _ d`. 
+If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you can write *rewrite rules*, such as `n -> m / _ p` (*n* turns into *m* if followed by *p*), or parallel *constraints*, such as `n:m <=> _ *:p` (an *n* on the lexical side is realised as *m*, if it's followed by a *p* on the surface side; conversely, if a *m* on the surface side is followed by a *p*, then it must be a *n* in the lexical side.) The latter is nicer, because it is unambiguously reversible. 
 
-These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they transform the input. This means we can do reversible analysis and generation. Moreover, you don't have to explicitly think about the order of the morphological rules; all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the difficult morphology, and does it unambiguously. (Much less trivial than it sounds!)
-
-As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language.
+These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they transform the input.
+As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language. You just write local rules, one for each phenomenon, and all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the morphology.
 
 
 ### Mathematical insight / writing tools to write morphological analysers
