@@ -20,11 +20,11 @@ A mandatory classic reading on the topic of limitations: [link](http://stackover
 
 ### Writing morphological analysers
 
-If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you write *rewrite rules*: `a` turns into `b` if surrounded by `c _ d`. The contexts `c` and `d` are regular expressions.
+If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you write *rewrite rules*: `a` turns into `b` if surrounded by `c _ d`. 
 
 These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they transform the input. This means we can do reversible analysis and generation. Moreover, you don't have to explicitly think about the order of the morphological rules; all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the difficult morphology, and does it unambiguously. (Much less trivial than it sounds!)
 
-As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language. (Also it's a good idea not try to match contexts that are not regular. :-P)
+As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language.
 
 
 ### Mathematical insight / writing tools to write morphological analysers
