@@ -30,12 +30,29 @@ which becomes
 
 
 ```
-      (count(x,y) / corpus_size) * corpus_size * corpus_size
+                (count(x,y) / corpus_size) 
 log __________________________________________________________
-     count(x)               * count(y)
+     (count(x) * count(y)) / (corpus_size * corpus_size)
 ```
 
-The `/ corpus_size` and one of the `* corpus_size`s cancel each other out, so we end up with
+Dividing two fractions = flip one and multiply.
+
+```
+     count(x,y)      corpus_size * corpus_size
+log ____________  *  __________________________
+     corpus_size      count(x) * count(y)
+```
+
+Multiplying two fractions = join the lines
+
+```
+     count(x,y)	 *  corpus_size * corpus_size
+log _________________________________________
+     corpus_size  *  count(x) * count(y)
+```
+
+
+The `corpus_size` in denominator cancels out one of them in the numerator, so we end up with
 
 ```
     count(x,y) * corpus_size
