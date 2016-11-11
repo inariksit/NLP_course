@@ -20,10 +20,10 @@ A mandatory classic reading on the topic of limitations: [link](http://stackover
 
 ### Writing morphological analysers
 
-If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you can write *rewrite rules*, such as `n -> m / _ p` (*n* turns into *m* if followed by *p*), or parallel *constraints*, such as `n:m <=> _ *:p` (an *n* on the lexical side is realised as *m*, if it's followed by a *p* on the surface side; conversely, if a *m* on the surface side is followed by a *p*, then it must be an *n* in the lexical side.) 
+If you are interested in developing morphological resources for some language, you'll need knowledge of morphological tools (lexc, twol, ...). With those tools, you can write *rewrite rules*, such as `n -> m / _ p` (*n* turns into *m* if followed by *p*), or parallel *constraints*, such as `n:m <=> _ b:p` (an *n* on the lexical side is realised as *m*, if it's followed by a *p* on the surface side, and that *p* is a *b* on the lexical side. Conversely, if there is a sequence *mp* on the surface side, then it must be an *nb* in the lexical side. This rule models two phenomena: first, the nasal assimilates in place of the plosive, and second, the plosive loses its voicing.) 
 
 These tools use internally *transducers* to do all the fancy stuff. Transducers are like automata, but instead of just matching, they also transform the input.
-As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language. You just write local rules, one for each phenomenon, and all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the morphology.
+As for theory, you as a user don't need much insight in automata/transducers, but more on the morphophonological phenomena that happen in your language. You just write local rules, what you need for each phenonemon, and all the fancy transducer magic transforms your rules into a single minimal black box that tackles all the morphology.
 
 
 ### Mathematical insight / writing tools to write morphological analysers
