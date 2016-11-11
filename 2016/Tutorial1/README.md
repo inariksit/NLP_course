@@ -11,7 +11,7 @@ Last year's notes: [Printing Python objects & useful built-in functions](https:/
 
 ## Part III: Word statistics, language models and corpus methods
 
-[PMI and LMI](partIII.md)
+Last year's notes: [PMI and LMI](https://github.com/inariksit/NLP_course/blob/master/2015/Tutorial1/partIII.md)
 
 Zipf's law:
 * [zipf.py](https://github.com/inariksit/NLP_course/blob/master/2015/Tutorial1/zipf.py)
