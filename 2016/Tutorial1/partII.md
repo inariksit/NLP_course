@@ -12,7 +12,8 @@ Moreover, there is a corresponding automaton for any RE; and a corresponding RE 
 ### Matching strings 
 If you as a user just want to match some strings, writing REs is the common way to make standard tools understand what you want to match. [Here](https://regex101.com/), go match until your fingers are sore! ^_^
 
-As for theory, it's useful to understand some limitations[2] of regular expressions -- for instance, you cannot match a string "an arbitrary amount of 0s followed by *the same amount* of 1s" with a regular expressions, no matter how clever RE you write. (Of course, you can do five 0s followed by five 1s, or fifty, but the keyword here is *arbitrary* same amount.)
+As for theory, it's useful to understand some limitations[2] of regular expressions -- for instance, you cannot match a string "an arbitrary amount of `a`s followed by *the same amount* of `b`s" with a regular expressions, no matter how clever RE you write. (Of course, you can do five 0s followed by five 1s, or fifty, but the keyword here is *arbitrary* same amount.)
+Maybe looking at automata makes it clearer why some languages are not regular? Automata have no history; if you are in one state, you can take any transition from it, and you **cannot** restrict your automaton, like "go to state `q1` only if I got here with symbol *a*". 
 
 A mandatory classic reading on the topic of limitations: [link](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
 
