@@ -57,7 +57,5 @@ A **reductionist** grammar formalism is constrasted with a **licencing** (or, *g
 A couple of terms were related to the expressivity of the grammars: **regular grammar** and **context-free grammar**.
 Many of you mentioned the [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Summary). Regular grammars are the least expressive, and context-free grammars come after regular grammars. You might find the numbering confusing (Type-0=most expressive, Type-3=least expressive)--don't worry about remembering a number, try to get an intuition about what kinds of production rules the grammars allow, what kinds of strings they accept and so on.
 
-*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy.
-
-
+*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy. [Functional Dependency Grammar](https://helda.helsinki.fi/bitstream/handle/10138/19246/parsingi.pdf) is a dependency-based formalism that can express constructs beyond context-free: see Chapter **3.4 Expression power** starting from page 22 in the linked document.
 
