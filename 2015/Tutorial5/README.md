@@ -45,10 +45,10 @@ Take the sentence "People like little dogs". The combination "like dogs" is a ca
 
 For a full explanation, read this! http://taweb.aichi-u.ac.jp/tmgross/catena.html
 
-### Reductionist grammar
+### Reductionistic grammar
 
 Now onto something that is *not* generative!
-A **reductionist** grammar formalism is constrasted with a **licencing** (or, *generative*!) grammar formalism. An empty reductionist grammar allows all possible strings in the world, whereas an empty licencing grammar allows no string.
+A **reductionistic** grammar formalism is constrasted with a **licencing** (or, *generative*!) grammar formalism. An empty reductionist grammar allows all possible strings in the world, whereas an empty licencing grammar allows no string.
 [Constraint Grammar](http://beta.visl.sdu.dk/constraint_grammar.html) (CG) is an example of a reductionist system. The starting point is that the words can have any analysis provided by a morphological analyser, and the task of the constraint rules is to get rid of inappropriate analyses. A perfect CG leaves only the right POS tags (=more structure than we started with!), and an empty CG leaves in place all the POS tags.
 
 
@@ -57,5 +57,5 @@ A **reductionist** grammar formalism is constrasted with a **licencing** (or, *g
 A couple of terms were related to the expressivity of the grammars: **regular grammar** and **context-free grammar**.
 Many of you mentioned the [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Summary). Regular grammars are the least expressive, and context-free grammars come after regular grammars. You might find the numbering confusing (Type-0=most expressive, Type-3=least expressive)--don't worry about remembering a number, try to get an intuition about what kinds of production rules the grammars allow, what kinds of strings they accept and so on.
 
-*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Combinatory Categorial Grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) and X-bar are both based on constituency, but they are in different level in the Chomsky hierarchy. [Functional Dependency Grammar](https://helda.helsinki.fi/bitstream/handle/10138/19246/parsingi.pdf) is a dependency-based formalism that can express constructs beyond context-free: see Chapter **3.4 Expression power** starting from page 22 in the linked document.
+*Expressivity* is orthogonal to the question about *constituency vs. dependency*: e.g. [Head-driven Phrase Structure Grammar](https://en.wikipedia.org/wiki/Head-driven_phrase_structure_grammar) (HPSG) and [X-bar](https://en.wikipedia.org/wiki/X-bar_theory) are both based on constituency, but they are in different level in the Chomsky hierarchy. For example, [Functional Dependency Grammar](https://helda.helsinki.fi/bitstream/handle/10138/19246/parsingi.pdf) is a dependency-based formalism that can express constructs beyond context-free: see Chapter **3.4 Expression power** starting from page 22 in the linked document.
 
