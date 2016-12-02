@@ -20,8 +20,7 @@ There is a lot of association with Chomsky, or whether generative grammar is som
 Regardless of these questions, a generative grammar is simply a set of rules that generate all acceptable sequences in the language that the grammar describes.
 Depending on the viewpoint, generative grammar can be contrasted with different things. A linguist could contrast a generative grammar with a formalism that allows more gradient view of language: utterances are not simply "yes" or "no", but there are degrees of acceptability. Another person would contrast generative grammar to a system that gives rules which forbid sequences (see Reductionist grammar).
 
-A language described by a generative grammar doesn't have to be a natural language, it may well be a programming language. In addition, the grammar doesn't have to be a context-free grammar, it can be more or less expressive. Nor does it have to be necessarily a phrase-structure grammar.
-
+A language described by a generative grammar doesn't have to be a natural language, it may well be a programming language. In addition, the grammar doesn't have to be a context-free grammar, it can be more or less expressive.
 
 ### Dependency grammar vs. phrase-structure grammar
 
