@@ -36,11 +36,9 @@ Likewise, if some word only appears in 100 reviews, it's a higher chance that th
 A collection has a maximal entropy if all the values in it are evenly distributed. If there are only two classes, then the maximum value for the entropy is 1, and that is reached when there are same number of words in each class. But if there are more classes, then the number can be higher. If you can draw any item of, say, 10 classes, you will be more surpised at whatevery you get, than if you could only get items of 2 classes.
 
 
-100 aardvarks: you expect aardvarks and you always get aardvarks. Entropy 0, you're never surprised.
-99 aardvarks - 1 horse: you expect mostly aardvarks and you mostly get aardvarks. Entropy is very small, you're very rarely surprised.
-50 aardvarks - 50 horses: you can't rely on any great strategy to guess which animal you get, but it's still pretty safe: it can only be an aardvark or a horse. Entropy 1, you're sort of mildly surprised all the time. Note it has nothing to do with the absolute value. The entropy is the same for 3 horses - 3 aardvarks as it is for 300 horses and 300 aardvarks.
-
-
-2 aardvarks - 2 horses - 2 kangaroos - 2 dinosaurs ... - 2 warthogs: you live in the state of great uncertainty, any kind of animal out of 50 may appear at your door. Entropy is high, you're really surprised all the time.
+* 100 aardvarks: you expect aardvarks and you always get aardvarks. Entropy 0, you're never surprised.
+* 99 aardvarks - 1 horse: you expect mostly aardvarks and you mostly get aardvarks. Entropy is very small, you're very rarely surprised.
+* 50 aardvarks - 50 horses: you can't rely on any great strategy to guess which animal you get, but it's still pretty safe: it can only be an aardvark or a horse. Entropy 1, you're sort of mildly surprised all the time. Note it has nothing to do with the absolute value. The entropy is the same for 3 horses - 3 aardvarks as it is for 300 horses and 300 aardvarks.
+* 2 aardvarks - 2 horses - 2 kangaroos - 2 dinosaurs ... - 2 warthogs: you live in the state of great uncertainty, any kind of animal out of 50 may appear at your door. Entropy is high, you're really surprised all the time.
 
 
