@@ -1,5 +1,3 @@
-from nltk.book import text1
-
 ###################
 ## Helper functions
 
@@ -67,7 +65,8 @@ def zipf(document):
     # Finally, return the result!
     # zip takes n lists as an argument, and returns a list of n-tuples:
     # e.g. zip(['a','b'], [1,2]) returns [('a',1), ('b',2)].
-    return zip(ranks, words, freqs, expected_freqs)
+    # 2017: added list() in order to make it python3-compatible
+    return list(zip(ranks, words, freqs, expected_freqs))
 
 
 
@@ -76,9 +75,9 @@ def zipf(document):
 
 if __name__ == "__main__":    
 
+    text = "this is some text, replace with your own, this is way too short!"
+
     print("#n: <word> \t freq  expected")
     print("-------------------------------")
-    for r,w,f,ef in zipf(text1)[:31]: # change 31 if you want more/less items
+    for r,w,f,ef in zipf(text)[:10]: # change if you want more/less items
         prettyprint(r,w,f,ef)
-
-     
