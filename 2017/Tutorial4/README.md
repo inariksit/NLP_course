@@ -16,3 +16,11 @@ Some picks of your examples:
 “It will at least have to wait until you are in a more stable situation.”
 
 > “Come to the nerd side, we have pi”
+
+## Q2: NLTK document classifier
+
+See comments from last year: https://github.com/inariksit/NLP_course/tree/master/2016/Tutorial4#q1-lessons-on-statistical-relevance
+
+## Q3: Everything explained
+
+Language identification: https://translate.google.com/ Type short combinations of letters into Google Translate and ask it to identify the language ^_^
