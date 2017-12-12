@@ -30,3 +30,27 @@ Related to language identification, here's an exercise in reverse engineering: t
 ## Q4: Entropy
 
 Comments from last year: https://github.com/inariksit/NLP_course/tree/master/2016/Tutorial4#q3-entropy-and-classeslabelscategories
+
+General note on Python lists and tuples: many of you do like this:
+
+```python
+names = ["Bella", "Max", "Max"]
+species = ["human", "dog", "human"]
+names_species_strings = ["Bella human", "Max dog", "Max human"] 
+# or a version with tuples
+names_species_tuples = [("Bella","human"), ("Max","dog"), ("Max","human")] 
+```
+
+To save some typing, you could use the `zip` function, which takes two or more lists, and produces a list of tuples. For example, `zip([1,2],['a','b'])` produces the list `[(1,'a'),(2,'b')]`.
+
+```python
+names = ["Bella", "Max", "Max"]
+species = ["human", "dog", "human"]
+names_species_zipped = zip(names,species)
+```
+
+Or if you specifically want to have strings, you could do the following with list comprehensions:
+
+```python
+[n + s for (n, s) in names_species_zipped]
+```
