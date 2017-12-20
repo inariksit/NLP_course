@@ -18,3 +18,23 @@ keep everything else. The removal of the non-target tokens doesn’t tell us any
 > [Chinking] works in a different way as chunking, but the final structure should also be considered a simple way of parsing.  The amount of structure that chinking creates, as compared to chunking, would depend on the way each of these taggers are built, I don’t think you can tell generically which one creates more or less structure.
 
 ## Q2: Information extraction in the wild
+
+Note: I don't know what techniques are actually used in the website, the point was just to practice the concepts that you learned at the lecture. Here's a list of things you mentioned--it's irrelevant if some of them are actually not used.
+
+* Scraping / cleaning (removing formatting)
+* Sentence segmentation
+* Tokenisation
+* Stemming
+* Regular expressions
+* POS tagging
+* Syntactic parsing / dependency parsing
+* Named entity recognition 
+* Keyword extraction
+* Relation detection
+* Reference resolution
+* Event detection
+* Temporal expression recognition
+* Classification
+* Sentiment analysis
+* Summarisation
+
