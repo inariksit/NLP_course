@@ -2,12 +2,13 @@
 
 Using only IO, without B, would create ambiguities in cases like "Mary showed John Gothenburg" -- if both John and Gothenburg are tagged as I, it's ambiguous whether they are one entity or two.
 
+Next question, is chunking parsing? And how about chinking (i.e. specify holes outside chunks, so you get left
+with chunks)? 
+
 An important distinction between chunking and full parsing is that chunks can't be recursive. As many of you noted, chunking is called often shallow or partial parsing. 
 So yes, for some values of parsing! I wasn't really interested in a right or wrong answer, just the reasons. :-)
 
 As for chunking and chinking, I'll just quote your answers:
-
-> The structure created by the two methods should depend on how much we choose to chunk or chink.
 
 > I would say that chunking creates more structure, as it tags the chunks it creates. As chinking doesn’t label the structures it creates when dividing the chunks, it doesn’t really give any meaning to the structures
 
